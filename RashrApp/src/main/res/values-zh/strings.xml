@@ -5,10 +5,13 @@
   <string name="sCWM">CWM Recovery</string>
   <string name="sFlashRecovery">刷写Recovery</string>
   <string name="sFlashKernel">刷写内核</string>
-  <string name="sHistory">历史</string>
+  <string name="recovery_history">历史Recovery</string>
+  <string name="kernel_history">历史内核</string>
+
   <string name="sTWRP">TWRP Recovery</string>
   <string name="sPhilz">Philz Recovery</string>
-  <string name="sOTHER">其他</string>
+  <string name="other_recovery">刷写其他Recovery</string>
+  <string name="other_kernel">刷写其他内核</string>
   <string name="sRecoveryBackup">备份Recovery</string>
   <string name="sKernelBackup">备份内核</string>
   <string name="backups">备份</string>
@@ -155,4 +158,7 @@ TWRP:
   <string name="clear_logs">清除日志</string>
   <string name="file_chooser_dialog_title">选择文件</string>
   <string name="choose_message">是否确认刷写%s？</string>
+  <string name="flasher">Flasher</string>
+  <string name="history">历史</string>
+  <string name="exit_app">是否退出？</string>
 </resources>
