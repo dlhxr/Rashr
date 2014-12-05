@@ -1,6 +1,10 @@
 CHANGELOG
 ====================
 
+Update [2.2.3-1]
+
+-Fix for OnePlus only!
+
 Update [2.2.3]
 
 -More devices recognized on Lollipop!
