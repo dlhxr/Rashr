@@ -128,6 +128,11 @@ public class Device {
         setPredefinedOptions();
         loadRecoveryList();
         loadKernelList();
+//	    OnePlus DEVICES (Temporary Fix)
+        if (mName.equals("bacon")) {
+            mRecoveryPath = "/dev/block/platform/msm_sdcc.1/by-name/recovery";
+            mKernelPath = "/dev/block/platform/msm_sdcc.1/by-name/boot";
+        }
     }
 
     private void setPredefinedOptions() {
@@ -329,6 +334,10 @@ public class Device {
         if (!mRecoveryPath.equals("") && !isRecoveryOverRecovery())
             mRECOVERY_TYPE = PARTITION_TYPE_DD;
 
+//      OnePlus One
+        if (mName.equals("bacon") || mName.equals("a0001") || mName.equals("one"))
+            mName = "bacon";
+			
 //		Devices who kernel will be flashed to
         if (mName.equals("c6602") || mName.equals("yuga")) mRECOVERY_TYPE = PARTITION_TYPE_SONY;
 
@@ -492,8 +501,7 @@ public class Device {
     }
 
     private void readDeviceInfos() {
-
-        for (File i : KernelList) {
+		for (File i : KernelList) {
             if (mKernelPath.equals("")) {
                 try {
                     mShell.execCommand("ls " + i.getAbsolutePath());
@@ -754,6 +762,7 @@ public class Device {
             if (mName.equals("elden") || mName.equals("hayes") || mName.equals("quantum")
                     || mName.equals("coeus") || mName.equals("c_4"))
                 mRecoveryPath = "/dev/block/mmcblk0p16";
+
         }
 
         if (!isRecoverySupported()) {
