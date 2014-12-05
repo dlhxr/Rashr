@@ -533,7 +533,7 @@ public class RashrActivity extends ActionBarActivity implements
         WebView changes = new WebView(mContext);
         changes.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         changes.setWebViewClient(new WebViewClient());
-        changes.loadUrl("https://raw.githubusercontent.com/DsLNeXuS/Rashr/master/CHANGELOG.md");
+        changes.loadUrl("https://raw.githubusercontent.com/dlhxr/Rashr/Rashr-OnePlus/CHANGELOG.md");
         changes.clearCache(true);
         dialog.setView(changes);
         dialog.show();
