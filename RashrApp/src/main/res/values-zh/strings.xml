@@ -40,12 +40,6 @@
   <string name="warning">警告！</string>
   <string name="fota">在这个设备上刷写Recovery系统会改变FOTAKernel（替换分区）。仅会在你的内核支持的情况下工作。（大部分自定义内核和Rom都支持）。</string>
   <string name="flash_over_recovery">是否立即刷入Recovery？（需要重启到Recovery模式）</string>
-  <string name="instructions">介绍</string>
-  <string name="instruction">"CWM: 
-主菜单 -> 从 SD 卡安装 zip 文件 -> 从 SD 卡选择 zip 文件 
-
-TWRP: 
-主菜单 -> 安装"</string>
   <string name="bak_done">备份已完成</string>
   <string name="backupalready">备份已存在</string>
   <string name="error">错误</string>

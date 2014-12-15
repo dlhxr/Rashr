@@ -61,8 +61,6 @@ public class ScriptManagerFragment extends Fragment {
     FileChooserDialog mFileChooser;
     String[] mAllowedEXT = {".zip"};
 
-    private OnFragmentInteractionListener mListener;
-
     public static ScriptManagerFragment newInstance(RashrActivity activity, File ZIP) {
         ScriptManagerFragment fragment = new ScriptManagerFragment();
         fragment.setContext(activity);
@@ -73,11 +71,6 @@ public class ScriptManagerFragment extends Fragment {
 
     public ScriptManagerFragment() {
         // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -143,6 +136,7 @@ public class ScriptManagerFragment extends Fragment {
                 CheckBox cbBakCache = (CheckBox) mRootView.findViewById(R.id.cbBackupCache);
                 CheckBox cbBakRecovery = (CheckBox) mRootView.findViewById(R.id.cbBackupRecovery);
                 CheckBox cbBakBoot = (CheckBox) mRootView.findViewById(R.id.cbBackupBoot);
+				CheckBox cbSkipMD5 = (CheckBox) mRootView.findViewById(R.id.cbSkipMD5);
                 EditText etBakName = (EditText) mRootView.findViewById(R.id.etBackupName);
                 CheckBox cbWipeCache = (CheckBox) mRootView.findViewById(R.id.cbWipeCache);
                 CheckBox cbWipeDalvik = (CheckBox) mRootView.findViewById(R.id.cbWipeDalvik);
@@ -157,6 +151,7 @@ public class ScriptManagerFragment extends Fragment {
                     if (cbBakData.isChecked()) command.append("D");
                     if (cbBakRecovery.isChecked()) command.append("R");
                     if (cbBakSystem.isChecked()) command.append("S");
+					if (cbSkipMD5.isChecked()) command.append("M");
 
                     CharSequence BackupName = etBakName.getText();
                     if (BackupName != null && !BackupName.equals("")) {
@@ -220,27 +215,6 @@ public class ScriptManagerFragment extends Fragment {
             }
         });
         return mRootView;
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    public interface OnFragmentInteractionListener {
-        public void onFragmentInteraction(int id);
     }
 
     public void setShell(Shell shell) {
