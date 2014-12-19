@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rashr</string>
     <string name="settings">设置</string>
@@ -88,7 +88,7 @@
     <string name="no_history">未检测到历史记录</string>
     <string name="styles">风格</string>
     <string-array name="styles">
-        <Rashr>Styles</Rashr>
+        <item>风格</item>
         <item>Holo Light Dark Bar Style</item>
         <item>Holo Light Style</item>
         <item>Holo Dark Style</item>
